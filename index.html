@@ -555,7 +555,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
       <p class="fv-lead">赤い箱をひらく、<br>その瞬間から<br>クリスマスがはじまる。</p>
     </div>
     <nav class="fv-offers" aria-label="クーポン">
-      <a class="fv-offer" href="#offer-gift" data-live="gift-cpn"><span class="nm">大切な人へ<b>スペシャルギフトBOX</b></span><span class="two2"><b>2</b>点で</span><span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm">12/1<small>(火)</small> 10:00<br>〜 12/28<small>(月)</small> 23:59</span></a>
+      <a class="fv-offer" href="#offer-gift" data-live="gift-cpn"><span class="nm">大切な人へ<b>スペシャルギフトBOX</b></span><span class="two2"><b>2</b>点で</span><span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm">12/1<small>(火)</small> 0:00<br>〜 12/28<small>(月)</small> 23:59</span></a>
       <a class="fv-offer" href="#offer-post" data-live="post-cpn"><span class="nm">自分へ<b>ポスト投函BOX</b></span><span class="two2"><b>2</b>点で</span><span class="off"><b>500</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm">12/1<small>(火)</small> 0:00<br>〜 12/11<small>(金)</small> 9:59</span></a>
     </nav>
   </div>
@@ -583,7 +583,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
             <p class="tk-pre"><b>2</b>点購入で</p>
             <span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span>
             <p class="tk-cpn">クーポン</p>
-            <p class="tk-term"><span class="nw">12/1<small>(火)</small> 10:00</span> <span class="nw">〜 12/28<small>(月)</small> 23:59</span></p>
+            <p class="tk-term"><span class="nw">12/1<small>(火)</small> 0:00</span> <span class="nw">〜 12/28<small>(月)</small> 23:59</span></p>
             <p class="tk-cd" data-cd="gift"></p>
             <p class="tk-mix">シルキー肌<sup>※</sup>・ヴェール肌<sup>※</sup>の<br class="sp">組み合わせOK</p>
             <p class="note" style="margin-top:6px">※ 仕上がりイメージのこと</p>
@@ -633,7 +633,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="cal-axis"><span style="left:0"><b>11/27</b></span><span style="left:12.5%"><b>12/1</b></span><span style="left:45.05%"><b>12/11</b></span><span style="left:100%"><b>12/28</b></span></div>
         <p class="cal-now" data-now><i>今日</i></p>
         <div class="cal-row"><h3>スペシャルギフトBOX</h3>
-          <div class="bar bar-cpn" data-bar="gift-cpn" style="margin-left:13.8%;width:86.2%">2点で<b>1,000</b>円OFF</div>
+          <div class="bar bar-cpn" data-bar="gift-cpn" style="margin-left:12.5%;width:87.5%">2点で<b>1,000</b>円OFF</div>
           <div class="bar bar-pt" data-bar="gift-pt" style="margin-left:45.05%;width:46.87%">ポイント<b>10</b>倍</div></div>
         <div class="cal-row"><h3>ポスト投函BOX</h3>
           <div class="bar bar-cpn bar-stack" data-bar="post-cpn" style="margin-left:12.5%;width:32.55%"><span class="bar-two">2点で</span><span><b>500</b>円OFF</span></div>
@@ -848,7 +848,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     <h2>クーポンのご注意</h2>
     <div class="terms-grid">
       <div><h3>スペシャルギフトBOX<br class="sp"> 2点で1,000円OFF</h3><ul>
-        <li>クーポン配布期間は12月1日(火)10:00〜12月28日(月)23:59です。</li>
+        <li>クーポン配布期間は12月1日(火)0:00〜12月28日(月)23:59です。</li>
         <li>ポイント10倍の期間は12月11日(金)10:00〜12月26日(土)9:59です。</li>
         <li>スペシャルギフトBOXを2点以上ご購入の際にご利用いただけます。シルキー肌<sup>※</sup>・ヴェール肌<sup>※</sup>の組み合わせは自由です。</li>
       </ul><p class="note">※ 仕上がりイメージのこと</p></div>
@@ -930,12 +930,12 @@ document.querySelectorAll("[data-coupon]").forEach(a => { const u = COUPON_URL[a
 /* ---- 期間で自動切り替え(?now=2026-12-12T00:00 で確認できる) ---- */
 const at = t => new Date(t + "+09:00").getTime();
 const PERIOD = {
-  "gift-cpn": [at("2026-12-01T10:00:00"), at("2026-12-28T23:59:59")],
+  "gift-cpn": [at("2026-12-01T00:00:00"), at("2026-12-28T23:59:59")],
   "gift-pt":  [at("2026-12-11T10:00:00"), at("2026-12-26T09:59:59")],
   "post-cpn": [at("2026-12-01T00:00:00"), at("2026-12-11T09:59:59")],
   "post-pt":  [at("2026-11-27T10:00:00"), at("2026-12-11T09:59:59")]
 };
-const START_LABEL = { gift: "12/1(火) 10:00 スタート", post: "12/1(火) 0:00 スタート" };
+const START_LABEL = { gift: "12/1(火) 0:00 スタート", post: "12/1(火) 0:00 スタート" };
 const CAL = [at("2026-11-27T00:00:00"), at("2026-12-29T00:00:00")];
 const NOW = new URLSearchParams(location.search).get("now");
 const shift = NOW ? at(NOW.length === 16 ? NOW + ":00" : NOW) - Date.now() : 0;
