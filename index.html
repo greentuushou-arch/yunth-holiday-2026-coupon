@@ -889,7 +889,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 
 <script>
 /* 差し替え用: クーポンURLが決まったらここに入れる(空のあいだはクーポン欄へ移動) */
-const COUPON_URL = { gift: "", post: "" };
+const COUPON_URL = { gift: "https://coupon.rakuten.co.jp/getCoupon?getkey=UVpWUS1TVEhWLVFQNlUtTDNMRw--&rt=", post: "https://coupon.rakuten.co.jp/getCoupon?getkey=S1BSTS1YVkJaLTNRSlMtRVZGSA--&rt=" };
 const SHOT = new URLSearchParams(location.search).get("shot");
 if (SHOT) { document.documentElement.classList.add("shot"); document.documentElement.style.setProperty("--shot-h", SHOT + "px"); document.body.classList.add("opened"); }
 /* ---- ポスト投函BOX データ ---- */
