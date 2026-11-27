@@ -324,7 +324,12 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .first b{font-family:var(--num);font-weight:600;font-size:1.75em;letter-spacing:0;line-height:.9}
 .fv-offer .first{margin-top:8px;font-size:15px}
 @media (max-width:600px){.fv-offer .first{font-size:14px;padding:.2em .45em;letter-spacing:.02em}.fv-offer .first b{font-size:1.45em}}
-.tk .first{display:flex;width:fit-content;margin:0 auto 10px;font-size:20px}
+/* 先着の丸アイコン: 写真下の帯と白い札の境目、左上にまたがせる(札の中身の高さは右のクーポンとそろえたまま) */
+.way-body{padding-bottom:70px}
+.tk{position:relative}
+.tk-badge{--s:88px;position:absolute;z-index:2;left:16px;top:calc(22px - var(--s));width:var(--s);height:var(--s);border-radius:50%;background:var(--red-d);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--gold);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:14px;line-height:1.15;letter-spacing:.06em}
+.tk-badge b{font-family:var(--num);font-weight:600;font-size:27px;line-height:1;letter-spacing:0}
+@media (max-width:767px){.way-body{padding-bottom:58px}.tk-badge{--s:76px;left:12px}.tk-badge b{font-size:23px}}
 .calc .first{display:flex;width:fit-content;margin-left:auto;margin-right:auto}
 .shop-note{margin-top:4px}
 .calc .first{margin-bottom:10px}
@@ -379,6 +384,9 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .bar{position:relative;height:50px;margin-top:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;letter-spacing:.04em;white-space:nowrap}
 .bar b{font-family:var(--num);font-weight:600;font-size:1.35em;letter-spacing:0;margin:0 .06em;line-height:1}
 .bar-cpn{background:var(--red)}
+.bar-first{margin-right:16px;padding:3px 12px;background:#fff;color:var(--red-d);font-size:15px;line-height:1.2}
+.bar-first b{font-size:1.3em}
+.bar.is-end .bar-first{background:transparent;color:inherit}
 .bar-pt{background:linear-gradient(120deg,#f8e6b4,#e9cc86);color:#8f0f22}
 .bar.is-end{background:#e9e3e0;color:#9b8b8c}
 .cal-now{position:absolute;top:30px;bottom:0;border-left:2px solid var(--ink);display:none}
@@ -485,6 +493,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .tk-pt .t{font-size:min(17px,4.4vw);letter-spacing:0}
   .bar{font-size:min(16px,4.1vw);letter-spacing:0;height:46px}
   .bar-stack{flex-direction:column;height:56px;line-height:1.1}
+  .bar-gift{flex-direction:column;height:62px;line-height:1.1}
+  .bar-gift .bar-first{margin:0 0 4px;padding:1px 8px;font-size:14px}
   .bar-stack .bar-two{font-size:14px}
   .cal-list{grid-template-columns:1fr;margin-top:40px}
   .duo{margin:48px -16px -90px;padding:44px 16px 46px}
@@ -589,8 +599,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         </a>
         <div class="tk">
           <div data-live="gift-cpn">
+            <p class="tk-badge" aria-label="先着1,000名様"><span>先着</span><b>1,000</b><span>名様</span></p>
             <p class="tk-status" data-status="gift"></p>
-            <span class="first"><span>先着</span><b>1,000</b><span>名様</span></span>
             <p class="tk-pre"><b>2</b>点購入で</p>
             <span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span>
             <p class="tk-cpn">クーポン<sup>※7</sup></p>
@@ -646,7 +656,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="cal-axis"><span style="left:0"><b>11/27</b></span><span style="left:12.5%"><b>12/1</b></span><span style="left:45.05%"><b>12/11</b></span><span style="left:100%"><b>12/28</b></span></div>
         <p class="cal-now" data-now><i>今日</i></p>
         <div class="cal-row"><h3>スペシャルギフトBOX</h3>
-          <div class="bar bar-cpn" data-bar="gift-cpn" style="margin-left:12.5%;width:87.5%">2点で<b>1,000</b>円OFF</div>
+          <div class="bar bar-cpn bar-gift" data-bar="gift-cpn" style="margin-left:12.5%;width:87.5%"><span class="bar-first">先着<b>1,000</b>名様</span><span>2点で<b>1,000</b>円OFF</span></div>
           <div class="bar bar-pt" data-bar="gift-pt" style="margin-left:45.05%;width:46.87%">ポイント<b>10</b>倍</div></div>
         <div class="cal-row"><h3>ポスト投函BOX</h3>
           <div class="bar bar-cpn bar-stack" data-bar="post-cpn" style="margin-left:12.5%;width:32.55%"><span class="bar-two">2点で</span><span><b>500</b>円OFF</span></div>
