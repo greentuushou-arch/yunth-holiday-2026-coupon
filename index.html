@@ -325,12 +325,11 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .fv-offer .first{margin-top:8px;font-size:15px}
 @media (max-width:600px){.fv-offer .first{font-size:14px;padding:.2em .45em;letter-spacing:.02em}.fv-offer .first b{font-size:1.45em}}
 /* 先着の丸アイコン: 写真下の帯と白い札の境目、左上にまたがせる(札の中身の高さは右のクーポンとそろえたまま) */
-.way-body{padding-bottom:70px}
 .tk{position:relative}
-.tk-badge{--s:88px;position:absolute;z-index:2;left:16px;top:calc(22px - var(--s));width:var(--s);height:var(--s);border-radius:50%;background:var(--red-d);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--gold);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:14px;line-height:1.15;letter-spacing:.06em}
+.tk-badge{--s:88px;position:absolute;z-index:2;left:16px;top:16px;width:var(--s);height:var(--s);border-radius:50%;background:var(--red-d);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--gold);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:14px;line-height:1.15;letter-spacing:.06em}
 .tk-badge b{font-family:var(--num);font-weight:600;font-size:27px;line-height:1;letter-spacing:0}
-@media (min-width:1100px){.way-body{padding-bottom:44px}.tk-badge{top:calc(54px - var(--s))}}
-@media (max-width:767px){.way-body{padding-bottom:40px}.tk-badge{--s:76px;left:12px;top:calc(42px - var(--s))}.tk-badge b{font-size:23px}.way-gift .tk-status{margin-top:26px}}
+@media (min-width:768px) and (max-width:1099px){.tk-badge{--s:76px;left:12px;top:12px}.tk-badge b{font-size:23px}.tk-status{margin-top:66px}}
+@media (max-width:767px){.tk-badge{--s:76px;left:12px;top:12px}.tk-badge b{font-size:23px}.way-gift .tk-status{margin-top:68px}}
 .calc .first{display:flex;width:fit-content;margin-left:auto;margin-right:auto}
 .shop-note{margin-top:4px}
 .calc .first{margin-bottom:10px}
@@ -573,7 +572,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     <h1 class="fv-title"><span class="l1">Holiday</span><span class="l2">Collection</span><span class="yr">2026</span></h1>
     <div>
       <div class="fv-photo sp"><img src="images/fv-sp.jpg" alt="" width="1400" height="1140"></div>
-      <p class="fv-lead">赤い箱をひらく、<br>その瞬間から<br>クリスマスがはじまる。</p>
+      <p class="fv-lead">赤い箱をひらく、<br class="sp">その瞬間から<br>クリスマスがはじまる。</p>
     </div>
     <nav class="fv-offers" aria-label="クーポン">
       <a class="fv-offer" href="#offer-gift" data-live="gift-cpn"><span class="nm">大切な人へ<b>スペシャルギフトBOX</b></span><span class="first"><span>先着</span><b>1,000</b><span>名様</span></span><span class="two2"><b>2</b>点で</span><span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm">12/1<small>(火)</small> 0:00<br>〜 12/28<small>(月)</small> 23:59</span></a>
