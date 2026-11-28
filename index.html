@@ -597,6 +597,21 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .duo-cta{margin-top:18px}
 }
 @media (max-width:374px){.duo-note .nw{white-space:normal}.duo-note br{display:none}}
+
+/* クーポン札: カウントダウン・ポイントを外してカード型に */
+.ways-grid{gap:28px}
+.way{background:#fff;box-shadow:0 14px 34px -18px rgba(120,10,30,.45);outline:1px solid #f0d8d3}
+.tk{border:0;padding:28px 26px 28px}
+.tk > div:first-child{padding-bottom:18px;margin-bottom:auto}
+.tk-term{font-size:20px}
+.tk .btn-red{margin-top:6px}
+@media (max-width:767px){
+  .ways-grid{gap:36px}
+  .way img{aspect-ratio:4/3}
+  .tk{padding:22px 14px 22px}
+  .tk-cpn{font-size:28px}
+  .tk-term{font-size:min(18px,4.8vw)}
+}
 </style>
 </head>
 <body>
@@ -644,12 +659,9 @@ footer a{text-decoration:underline;text-underline-offset:3px}
             <p class="tk-cpn">クーポン<sup>※7</sup></p>
             <p class="note shop-note">※7 【公式】Yunth Store <span class="nw">楽天市場店で使用可能。</span></p>
             <p class="tk-term"><span class="nw">12/1<small>(火)</small> 0:00</span> <span class="nw">〜 12/28<small>(月)</small> 23:59</span></p>
-            <p class="tk-cd" data-cd="gift"></p>
-            <p class="tk-mix">シルキー肌<sup>※</sup>・ヴェール肌<sup>※</sup>の<br class="sp">組み合わせOK</p>
-            <p class="note" style="margin-top:6px">※ 仕上がりイメージのこと</p>
+            <p class="tk-mix">2種どちらでも組み合わせOK</p>
           </div>
           <p class="tk-ended"><b>クーポンは終了しました</b><span>BOXはなくなり次第終了となります</span></p>
-          <div class="tk-pt" data-live="gift-pt"><p class="m"><span>さらに</span><em>ポイント</em><b>10</b><i>倍</i></p><p class="t"><span class="nw">12/11<small>(金)</small> 10:00</span> <span class="nw">〜 12/26<small>(土)</small> 9:59</span></p></div>
           <a class="btn btn-red" data-coupon="gift" data-live="gift-cpn" href="#duo-gift">クーポンを獲得する</a>
           <a class="btn btn-line" href="https://item.rakuten.co.jp/yunth/ys-r178/" target="_blank" rel="noopener">商品ページへ</a>
         </div>
@@ -672,11 +684,9 @@ footer a{text-decoration:underline;text-underline-offset:3px}
             <p class="tk-cpn">クーポン<sup>※7</sup></p>
             <p class="note shop-note">※7 【公式】Yunth Store <span class="nw">楽天市場店で使用可能。</span></p>
             <p class="tk-term"><span class="nw">12/1<small>(火)</small> 0:00</span> <span class="nw">〜 12/11<small>(金)</small> 9:59</span></p>
-            <p class="tk-cd" data-cd="post"></p>
             <p class="tk-mix">4種どの組み合わせでもOK</p>
           </div>
           <p class="tk-ended"><b>クーポンは終了しました</b><span>BOXはなくなり次第終了となります</span></p>
-          <div class="tk-pt" data-live="post-pt"><p class="m"><span>さらに</span><em>ポイント</em><b>10</b><i>倍</i></p><p class="t"><span class="nw">11/27<small>(金)</small> 10:00</span> <span class="nw">〜 12/11<small>(金)</small> 9:59</span></p></div>
           <a class="btn btn-red" data-coupon="post" data-live="post-cpn" href="#duo-post">クーポンを獲得する</a>
           <a class="btn btn-line" href="https://item.rakuten.co.jp/yunth/ys-r065/" target="_blank" rel="noopener">商品ページへ</a>
         </div>
@@ -1007,7 +1017,7 @@ function updatePeriod() {
     const el = document.querySelector('[data-status="' + k + '"]');
     el.textContent = live ? "開催中" : START_LABEL[k]; el.classList.toggle("is-live", live);
     const d = Math.max(0, (live ? en : st) - now);
-    document.querySelector('[data-cd="' + k + '"]').innerHTML = "<small>" + (live ? "終了まで" : "スタートまで") + "</small> " + Math.floor(d / 864e5) + "<small>日</small>" + pad2(Math.floor(d / 36e5) % 24) + "<small>時間</small>" + pad2(Math.floor(d / 6e4) % 60) + "<small>分</small>" + pad2(Math.floor(d / 1e3) % 60) + "<small>秒</small>";
+    const cd = document.querySelector('[data-cd="' + k + '"]'); if (cd) cd.innerHTML = "<small>" + (live ? "終了まで" : "スタートまで") + "</small> " + Math.floor(d / 864e5) + "<small>日</small>" + pad2(Math.floor(d / 36e5) % 24) + "<small>時間</small>" + pad2(Math.floor(d / 6e4) % 60) + "<small>分</small>" + pad2(Math.floor(d / 1e3) % 60) + "<small>秒</small>";
   });
   const nowEl = document.querySelector("[data-now]"), r = (now - CAL[0]) / (CAL[1] - CAL[0]);
   nowEl.style.display = r >= 0 && r <= 1 ? "block" : "none";
