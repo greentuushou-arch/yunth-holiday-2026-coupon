@@ -1,16 +1,17 @@
-"""index.html から「両脇レール」版 rail.html を作る。
+"""wide.html(横長レイアウトの元データ)から「両脇レール」版を作り、
+公開ページ index.html と rail.html(同じ内容)に書き出す。
 
 - 1180px 以上: 中央に 640px のスマホ幅カラム + 左レール(メニュー) + 右レール(2つのクーポン)
-- 1180px 未満: index.html と同じ見え方(スマホは下部バー + メニューボタン)
+- 1180px 未満: wide.html と同じ見え方(スマホは下部バー + メニューボタン)
 
 中央カラムの中はコンテナクエリで切り替えるので、PC でもスマホと同じレイアウトになる。
-index.html を直したら `python tools/build_rail.py` で作り直す。
+中身の修正は wide.html に入れて `python tools/build_rail.py` で作り直す(index.html は直接直さない)。
 """
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-src = (ROOT / "index.html").read_text(encoding="utf-8")
+src = (ROOT / "wide.html").read_text(encoding="utf-8")
 
 css_start = src.index("<style>") + len("<style>")
 css_end = src.index("</style>")
@@ -142,5 +143,6 @@ last_script_end = out.rindex("</script>")
 out = out[:last_script_end] + DRAWER_JS + out[last_script_end + len("</script>"):]
 assert out.count("<main") == 1 and out.count("</main>") == 1
 
-(ROOT / "rail.html").write_text(out, encoding="utf-8", newline="\n")
-print("rail.html written:", len(out), "chars")
+for name in ("index.html", "rail.html"):
+    (ROOT / name).write_text(out, encoding="utf-8", newline="\n")
+print("index.html / rail.html written:", len(out), "chars")
