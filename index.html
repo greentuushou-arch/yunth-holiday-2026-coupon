@@ -559,6 +559,44 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){
   .rv,.fv-copy > *,.fv-photo{opacity:1;transform:none;transition:none}
 }
+
+/* 2点ブロックをコンパクトに(例は2つ・スマホで短く) */
+.duo{padding:40px 40px 40px}
+.duo-head{font-size:clamp(26px,2.8vw,36px)}
+.duo-lead{margin-top:6px}
+.duo-grid{margin-top:26px;gap:32px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.calc{padding:22px 20px 22px}
+.calc .first{margin-bottom:6px}
+.calc-pre{font-size:19px}
+.calc .off{font-size:clamp(64px,6vw,80px);margin-top:2px}
+.calc-row{margin-top:12px;padding-top:12px;font-size:16px}
+.calc-row s{font-size:21px}
+.calc-after{font-size:17px}
+.calc-after b{font-size:46px}.calc-after i{font-size:24px}
+.calc-each{margin-top:4px;font-size:15px;padding:2px 12px}.calc-each b{font-size:21px}
+.pairs{gap:16px}
+.pair-boxes{height:118px}
+.mbox{width:84px;height:60px}.mbox:nth-child(2){height:74px}
+.pair-cap{margin-top:10px;font-size:18px}
+.pair-txt{font-size:15px}
+.duo-note{margin-top:24px;padding:10px 14px;font-size:16px}
+.duo-cta{margin-top:24px}
+@media (max-width:767px){
+  .duo{padding:32px 16px 34px}
+  .duo-grid{grid-template-columns:minmax(0,1fr);margin-top:20px;gap:20px}
+  .calc{padding:18px 10px 18px}
+  .calc .off{font-size:min(64px,17vw)}
+  .calc-after b{font-size:40px}
+  .pairs{gap:10px}
+  .pair-boxes{height:100px;padding-bottom:6px}
+  .mbox{width:min(64px,17vw);height:50px}.mbox:nth-child(2){height:62px}
+  .mbox .logo{width:30px}
+  .pair-cap{margin-top:8px;font-size:16px;letter-spacing:0}
+  .pair-txt{font-size:14px;letter-spacing:0}
+  .duo-note{margin-top:18px}
+  .duo-cta{margin-top:18px}
+}
+@media (max-width:374px){.duo-note .nw{white-space:normal}.duo-note br{display:none}}
 </style>
 </head>
 <body>
@@ -761,13 +799,9 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <p class="calc-row">15,840円 × 2点 ＝ <s>31,680</s>円</p>
           <p class="calc-after">クーポン利用で <span class="nw"><b>30,680</b><i>円</i></span></p>
           <p class="calc-each">1点あたり <b>15,340</b>円</p>
-          <p class="calc-mix">組み合わせ例<br><span class="nw">シルキー肌<sup>※</sup>BOX＋ヴェール肌<sup>※</sup>BOX</span><br>32,670円 → <b>31,670</b>円</p>
-          <p class="note">※ 仕上がりイメージのこと</p>
         </div>
         <div class="pairs">
           <div class="pair"><div class="pair-boxes"><span class="mbox"><b>わたしへ</b></span><span class="mbox"><b>母へ</b></span></div><p class="pair-cap">自分用と<br>贈りもの用に</p><p class="pair-txt">同じ箱をおそろいで</p></div>
-          <div class="pair"><div class="pair-boxes"><span class="mbox"><b>母へ</b></span><span class="mbox"><b>義母へ</b></span></div><p class="pair-cap">両家に<br>同じ贈りものを</p><p class="pair-txt">選び分けに迷わない</p></div>
-          <div class="pair"><div class="pair-boxes"><span class="mbox"><b>友だちへ</b></span><span class="mbox"><b>姉へ</b></span></div><p class="pair-cap">ありがとうを<br>2人に</p><p class="pair-txt">お世話になった人へ</p></div>
           <div class="pair"><div class="pair-boxes"><span class="mbox"><b>クリスマス</b></span><span class="mbox"><b>お正月</b></span></div><p class="pair-cap">クリスマスと<br>年始のご挨拶に</p><p class="pair-txt">2種から選べる</p></div>
         </div>
       </div>
@@ -818,14 +852,10 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <p class="calc-row">4,180円 × 2点 ＝ <s>8,360</s>円</p>
           <p class="calc-after">クーポン利用で <span class="nw"><b>7,860</b><i>円</i></span></p>
           <p class="calc-each">1点あたり <b>3,930</b>円</p>
-          <p class="calc-mix">組み合わせ例<br><span class="nw">ビタミンBOX＋レチノール<sup>※</sup>BOX</span><br>9,360円 → <b>8,860</b>円</p>
-          <p class="note">※ レチノール油液(ビタミンA 166,667IU/g)(整肌)</p>
         </div>
         <div class="pairs">
           <div class="pair"><div class="pair-boxes"><span class="mbox"><b>12月</b><span class="logo"></span></span><span class="mbox"><b>1月</b><span class="logo"></span></span></div><p class="pair-cap">同じ箱で<br>2か月分</p><p class="pair-txt">美容液56包分</p></div>
           <div class="pair"><div class="pair-boxes"><span class="mbox"><b>1つめ</b><span class="logo"></span></span><span class="mbox"><b>2つめ</b><span class="logo"></span></span></div><p class="pair-cap">ちがう箱を<br>2種類で</p><p class="pair-txt">組み合わせ自由</p></div>
-          <div class="pair"><div class="pair-boxes"><span class="mbox"><b>年末</b><span class="logo"></span></span><span class="mbox"><b>年始</b><span class="logo"></span></span></div><p class="pair-cap">年末年始も<br>とぎれずに</p><p class="pair-txt">お休み中も続けて</p></div>
-          <div class="pair"><div class="pair-boxes"><span class="mbox"><b>今日</b><span class="logo"></span></span><span class="mbox"><b>とっておき</b><span class="logo"></span></span></div><p class="pair-cap">ひとつは<br>とっておきに</p><p class="pair-txt">もう一度ご褒美を</p></div>
         </div>
       </div>
       <p class="duo-note"><span class="nw">2個ご購入でも、お届け先は1か所となり、</span><br class="sp"><span class="nw">送り状がBOXに貼られた状態での</span><br class="sp"><span class="nw">お届けとなりますことご了承ください。</span></p>
