@@ -677,6 +677,18 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .pick-index a.c-pdrn i{font-size:min(21px,5.6vw)}
   .pick-index a small{margin-top:3px;font-size:14px;letter-spacing:0}
 }
+
+/* スマホ幅: 見出しは1行に収め、不要な改行をなくす */
+@media (max-width:767px){
+  .choose-head{font-size:min(30px,6.4vw);letter-spacing:0}
+  .choose-head em{margin:0 .2em}
+  .duo-head{font-size:min(26px,6.6vw);letter-spacing:.02em}
+  .pick-head{font-size:min(26px,6.6vw);letter-spacing:.04em}
+  .ship h2{font-size:min(23px,5.6vw);letter-spacing:0}
+  .ship h2 br,.ship li b br{display:none}
+  .ways-head{font-size:min(24px,5.9vw);letter-spacing:.02em}
+  .cal-head{font-size:min(22px,5.6vw);letter-spacing:.02em}
+}
 </style>
 </head>
 <body>
@@ -701,7 +713,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <!-- ============ TWO WAYS ============ -->
 <section class="ways">
   <div class="inner">
-    <h2 class="ways-head rv"><small>Holiday Coupon</small>2点そろえて<br class="sp">クリスマスクーポン</h2>
+    <h2 class="ways-head rv"><small>Holiday Coupon</small>2点そろえてクリスマスクーポン</h2>
     <p class="ways-sub rv">いつもありがとうを伝えたい人へ。今年もがんばった自分へ。<span class="live"><br class="pc">クリスマス限定の2つのBOXは、それぞれ2点そろえるとクーポンが使えます。</span></p>
     <div class="ways-grid">
       <article class="way way-gift rv" id="offer-gift">
@@ -763,7 +775,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <section class="cal" id="calendar">
   <div class="inner">
     <div class="cal-box rv">
-      <h2 class="cal-head">クーポンと<br class="sp">ポイント10倍の期間</h2>
+      <h2 class="cal-head">クーポンとポイント10倍の期間</h2>
       <div class="cal-chart" aria-hidden="true">
         <div class="cal-axis"><span style="left:0"><b>11/27</b></span><span style="left:12.5%"><b>12/1</b></span><span style="left:45.05%"><b>12/11</b></span><span style="left:100%"><b>12/28</b></span></div>
         <p class="cal-now" data-now><i>今日</i></p>
@@ -793,7 +805,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <div class="choose">
-      <h3 class="choose-head rv">シルキー肌<sup>※2</sup><em>or</em><br class="sp">ヴェール肌<sup>※2</sup>。</h3>
+      <h3 class="choose-head rv"><span class="nw">シルキー肌<sup>※2</sup><em>or</em>ヴェール肌<sup>※2</sup></span></h3>
       <p class="choose-lead rv">どちらのBOXにも、Yunthの定番3アイテムが入っています。<br class="pc">贈る人の肌に合わせて、もう1本の美容液を選んでください。</p>
       <div class="base rv">
         <div class="base-photo"><img src="images/detail-vc.jpg" alt="生VC美白美容液の個包装" width="1000" height="470" loading="lazy"></div>
@@ -863,7 +875,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <div class="duo" id="duo-gift" data-live="gift-cpn">
-      <h3 class="duo-head">2点あると<br class="sp">贈り方がふえる</h3>
+      <h3 class="duo-head">2点あると贈り方がふえる</h3>
       <p class="duo-lead"><span class="nw">ひとつは自分に、</span><span class="nw">ひとつは大切な人へ。</span></p>
       <div class="duo-grid">
         <div class="calc">
@@ -905,7 +917,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <div class="pick">
-      <h3 class="pick-head rv">肌悩みで選ぶ、<br class="sp"><em>4つ</em>の箱。</h3>
+      <h3 class="pick-head rv">肌悩みで選ぶ、<em>4つ</em>の箱</h3>
       <nav class="pick-index rv" aria-label="ポスト投函BOX 4種">
         <a class="c-vc" href="#b-vc"><i>VC</i><small>¥4,180</small></a>
         <a class="c-va" href="#b-va"><i>VA</i><small>¥5,180</small></a>
@@ -917,7 +929,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <div class="duo" id="duo-post" data-live="post-cpn">
-      <h3 class="duo-head">2点あると<br class="sp">ご褒美がつづく</h3>
+      <h3 class="duo-head">2点あるとご褒美がつづく</h3>
       <p class="duo-lead"><span class="nw">送り状を貼って届くポスト投函BOXは、</span><span class="nw">自分へのご褒美にぴったり。</span></p>
       <div class="duo-grid">
         <div class="calc">
