@@ -613,6 +613,41 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .tk-cpn{font-size:28px}
   .tk-term{font-size:min(18px,4.8vw)}
 }
+
+/* FVのクーポン札: 先着は角の丸アイコンにして2枚の行をそろえる */
+.fv-offers{gap:16px}
+.fv-offer{position:relative;padding:22px 12px 14px}
+.fv-badge{position:absolute;top:-20px;right:-12px;z-index:2;width:62px;height:62px;border-radius:50%;background:var(--red-d);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:14px;line-height:1.1;letter-spacing:0}
+.fv-badge b{font-family:var(--num);font-weight:600;font-size:19px;line-height:1}
+.fv-offer .two2{margin-top:6px}
+.fv-offer .off{margin:2px 0 6px}
+.fv-offer .tm{padding-top:6px}
+@media (max-width:767px){
+  .fv-offers{gap:12px;margin-top:28px}
+  .fv-offer{padding:22px 4px 10px}
+  .fv-badge{width:54px;height:54px;top:-22px;right:-4px;font-size:14px}
+  .fv-badge b{font-size:16px}
+}
+
+/* スマホ幅: 余白と手動改行を詰める */
+@media (max-width:767px){
+  .ways{padding:52px 0 52px}
+  .ways-grid{margin-top:24px}
+  .cal{padding-bottom:44px}
+  .cal-box{padding-block:26px}
+  .cal-chart{margin-top:26px}
+  .gift,.post{padding:56px 0 60px}
+  .duo{margin-bottom:-60px}
+  .choose,.pick{margin-top:52px}
+  .boxes,.post-facts{margin-top:44px}
+  .base,.fork,.minis,.terms-grid{margin-top:22px}
+  .ship{padding:44px 0}
+  .terms{padding:44px 0}
+  .closing-body{padding:40px 20px 44px}
+  .closing-cta{margin-top:26px}
+  .ch-text{line-height:1.85}
+  .ch-text br,.ways-sub br,.choose-lead br,.duo-note br{display:none}
+}
 </style>
 </head>
 <body>
@@ -628,8 +663,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
       <div class="fv-photo sp"><img src="images/fv-sp.jpg" alt="" width="1400" height="1140"></div>
     </div>
     <nav class="fv-offers" aria-label="クーポン">
-      <a class="fv-offer" href="#offer-gift" data-live="gift-cpn"><span class="nm">大切な人へ<b>スペシャルギフトBOX</b></span><span class="first"><span>先着</span><b>1,000</b><span>名様</span></span><span class="two2"><b>2</b>点で</span><span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm">12/1<small>(火)</small> 0:00<br>〜 12/28<small>(月)</small> 23:59</span></a>
-      <a class="fv-offer" href="#offer-post" data-live="post-cpn"><span class="nm">自分へ<b>ポスト投函BOX</b></span><span class="two2"><b>2</b>点で</span><span class="off"><b>500</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm">12/1<small>(火)</small> 0:00<br>〜 12/11<small>(金)</small> 9:59</span></a>
+      <a class="fv-offer" href="#offer-gift" data-live="gift-cpn"><span class="fv-badge" aria-label="先着1,000名様"><span>先着</span><b>1,000</b><span>名様</span></span><span class="nm">大切な人へ<b>スペシャルギフトBOX</b></span><span class="two2"><b>2</b>点で</span><span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm"><span class="nw">12/1<small>(火)</small> 0:00</span> <span class="nw">〜 12/28<small>(月)</small> 23:59</span></span></a>
+      <a class="fv-offer" href="#offer-post" data-live="post-cpn"><span class="nm">自分へ<b>ポスト投函BOX</b></span><span class="two2"><b>2</b>点で</span><span class="off"><b>500</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span><span class="tm"><span class="nw">12/1<small>(火)</small> 0:00</span> <span class="nw">〜 12/11<small>(金)</small> 9:59</span></span></a>
     </nav>
   </div>
 </header>

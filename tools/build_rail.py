@@ -45,20 +45,24 @@ RAIL_CSS = """
 .menu a{display:flex;gap:12px;align-items:baseline;padding:11px 2px;color:#fff;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.06em;border-bottom:1px solid #ffffff33;white-space:nowrap;transition:color .2s}
 .menu a b{font-family:var(--num);font-weight:600;font-size:15px;color:var(--gold-l);width:1.7em}
 .menu a:hover,.menu a.is-cur{color:var(--gold-l)}
-.rcpn{position:relative;background:#fffdf9;color:var(--ink);text-align:center;padding:18px 14px 14px;outline:1px solid var(--gold);outline-offset:-6px}
-.rcpn-for{font-weight:700;font-size:15px;letter-spacing:.04em;line-height:1.4}
+.rcpn{position:relative;color:var(--ink);text-align:center;filter:drop-shadow(0 6px 14px #0000004d)}
+.rcpn-top,.rcpn-foot{--n:11px;background:#fffdf9}
+.rcpn-top{padding:16px 14px 12px;-webkit-mask:radial-gradient(circle var(--n) at 0 100%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% 100%,#0000 97%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle var(--n) at 0 100%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% 100%,#0000 97%,#000) right/51% 100% no-repeat}
+.rcpn-foot{padding:10px 14px 14px;background:#fbefe9;border-top:2px dashed #e3c6bd;-webkit-mask:radial-gradient(circle var(--n) at 0 0,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% 0,#0000 97%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle var(--n) at 0 0,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% 0,#0000 97%,#000) right/51% 100% no-repeat}
+.rcpn-for{font-weight:700;font-size:14px;letter-spacing:.04em;line-height:1.4}
 .rcpn-for b{display:block;font-size:17px;color:var(--red-d)}
-.rcpn .first{display:flex;width:fit-content;margin:8px auto 0;font-size:14px;padding:.2em .6em}
-.rcpn .first b{font-size:1.5em}
-.rcpn-two{margin-top:6px;font-weight:700;font-size:16px}
-.rcpn-two b{font-family:var(--num);font-weight:600;font-size:1.5em;color:var(--red)}
-.rcpn .off{font-size:56px;color:var(--red)}
-.rcpn-cpn{font-weight:900;font-size:20px;color:var(--red);line-height:1.3}
-.rcpn .note{margin-top:2px;font-size:14px;line-height:1.5}
-.rcpn-tm{margin-top:6px;padding-top:6px;border-top:1px solid #eadfd3;font-family:var(--num);font-weight:600;font-size:15px;line-height:1.5}
+.rcpn .first{display:flex;width:fit-content;margin:6px auto 0;font-size:14px;padding:.15em .6em}
+.rcpn .first b{font-size:1.45em}
+.rcpn-amt{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:4px;white-space:nowrap}
+.rcpn-amt .two{font-weight:700;font-size:15px;line-height:1}
+.rcpn-amt .two b{font-family:var(--num);font-weight:600;font-size:26px;line-height:1;color:var(--red);margin-right:1px}
+.rcpn .off{font-size:46px;color:var(--red)}
+.rcpn-cpn{font-weight:900;font-size:18px;color:var(--red);line-height:1.3;letter-spacing:.12em}
+.rcpn-tm{font-family:var(--num);font-weight:600;font-size:15px;line-height:1.5}
 .rcpn-tm small{font-family:var(--sans);font-size:14px}
-.rcpn .btn{width:100%;margin-top:10px;padding:11px 8px;font-size:16px;letter-spacing:.04em}
-@media (max-height:860px){.rail--r{gap:10px;padding-block:14px}.rcpn{padding:12px 12px 10px}.rcpn-for{font-size:14px}.rcpn-for b{font-size:15px}.rcpn .first{margin-top:4px}.rcpn-two{margin-top:2px}.rcpn .off{font-size:44px}.rcpn-cpn{font-size:17px}.rcpn-tm{font-size:14px}.rcpn .btn{margin-top:6px;padding:8px}}
+.rcpn .btn{width:100%;margin-top:8px;padding:10px 8px;font-size:16px;letter-spacing:.04em}
+.rnote{font-size:12px;line-height:1.6;color:#ffffffd9;text-align:center;letter-spacing:.02em}
+@media (max-height:860px){.rail--r{gap:10px;padding-block:14px}.rcpn-top{padding:10px 12px 8px}.rcpn-foot{padding:8px 12px 10px}.rcpn-for b{font-size:15px}.rcpn .off{font-size:40px}.rcpn-amt .two b{font-size:22px}.rcpn-cpn{font-size:16px}.rcpn .btn{margin-top:6px;padding:8px}}
 .menubtn{position:fixed;top:12px;right:12px;z-index:40;width:56px;height:56px;padding:0;border-radius:50%;border:1px solid var(--gold);background:#9e0f22;color:var(--gold-l);font-weight:700;font-size:13px;line-height:1;letter-spacing:0;cursor:pointer;box-shadow:0 2px 10px #0005}
 .menubtn span{display:block;width:22px;height:2px;margin:0 auto 5px;background:var(--gold-l);box-shadow:0 -6px 0 var(--gold-l)}
 .drawer{position:fixed;inset:0;z-index:35;background:#9e0f22f5;color:#fff;padding:92px 32px 32px;overflow:auto;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
@@ -90,24 +94,29 @@ RAILS = f"""
 
 <aside class="rail rail--r" aria-label="クーポン">
   <div class="rcpn" data-live="gift-cpn">
-    <p class="rcpn-for">大切な人へ<b>スペシャルギフトBOX</b></p>
-    <span class="first"><span>先着</span><b>1,000</b><span>名様</span></span>
-    <p class="rcpn-two"><b>2</b>点で</p>
-    <span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span>
-    <p class="rcpn-cpn">クーポン<sup>※7</sup></p>
-    <p class="note">※7 【公式】Yunth Store <span class="nw">楽天市場店で使用可能。</span></p>
-    <p class="rcpn-tm">12/1<small>(火)</small> 0:00<br>〜 12/28<small>(月)</small> 23:59</p>
-    <a class="btn btn-red" data-coupon="gift" href="#offer-gift">クーポン獲得</a>
+    <div class="rcpn-top">
+      <p class="rcpn-for">大切な人へ<b>スペシャルギフトBOX</b></p>
+      <span class="first"><span>先着</span><b>1,000</b><span>名様</span></span>
+      <div class="rcpn-amt"><p class="two"><b>2</b>点で</p><span class="off"><b>1,000</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span></div>
+      <p class="rcpn-cpn">クーポン<sup>※7</sup></p>
+    </div>
+    <div class="rcpn-foot">
+      <p class="rcpn-tm">12/1<small>(火)</small> 0:00〜<br>12/28<small>(月)</small> 23:59</p>
+      <a class="btn btn-red" data-coupon="gift" href="#offer-gift">クーポン獲得</a>
+    </div>
   </div>
   <div class="rcpn" data-live="post-cpn">
-    <p class="rcpn-for">自分へ<b>ポスト投函BOX</b></p>
-    <p class="rcpn-two"><b>2</b>点で</p>
-    <span class="off"><b>500</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span>
-    <p class="rcpn-cpn">クーポン<sup>※7</sup></p>
-    <p class="note">※7 【公式】Yunth Store <span class="nw">楽天市場店で使用可能。</span></p>
-    <p class="rcpn-tm">12/1<small>(火)</small> 0:00<br>〜 12/11<small>(金)</small> 9:59</p>
-    <a class="btn btn-red" data-coupon="post" href="#offer-post">クーポン獲得</a>
+    <div class="rcpn-top">
+      <p class="rcpn-for">自分へ<b>ポスト投函BOX</b></p>
+      <div class="rcpn-amt"><p class="two"><b>2</b>点で</p><span class="off"><b>500</b><span class="off__u"><i class="y">円</i><i class="o">OFF</i></span></span></div>
+      <p class="rcpn-cpn">クーポン<sup>※7</sup></p>
+    </div>
+    <div class="rcpn-foot">
+      <p class="rcpn-tm">12/1<small>(火)</small> 0:00〜<br>12/11<small>(金)</small> 9:59</p>
+      <a class="btn btn-red" data-coupon="post" href="#offer-post">クーポン獲得</a>
+    </div>
   </div>
+  <p class="rnote">※7 【公式】Yunth Store<span class="nw">楽天市場店で使用可能。</span></p>
 </aside>
 
 <button class="menubtn" type="button" aria-label="メニューを開く" aria-expanded="false" data-menubtn><span></span>メニュー</button>
