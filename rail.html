@@ -660,7 +660,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .way{border-width:4px}
   .way-name{letter-spacing:.02em}
 }
-@container main (max-width:374px){.way-name .nw{white-space:normal}.way-gift .tk-status{margin-top:76px}}
+@container main (max-width:374px){.way-name small{display:block}.way-gift .tk-status{margin-top:76px}}
 
 /* 4つの箱: 横並びのアイコン(注釈はPDRNの1つだけ) */
 .pick-index{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
@@ -711,6 +711,21 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .tk .btn{margin-top:8px}
 }
 @container main (max-width:374px){.tk-badge{--s:56px;margin-right:6px}.tk-badge b{font-size:16px}.tk-status{font-size:14px;padding:3px 6px;letter-spacing:0}}
+
+/* カード: 赤/金の帯を写真の上へ(見出しとして先に読ませる) */
+.way-body{order:-1;flex:none;padding:20px 28px 22px}
+.way-for{font-size:clamp(24px,2.2cqw,32px)}
+.way-name{margin-top:8px;line-height:1.4}
+.way-name small{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.04em;margin-right:.6em;opacity:.95}
+.way-meta{margin-top:8px}
+@container main (max-width:767px){
+  .way-body{padding:16px 16px 16px}
+  .way-for{font-size:22px}
+  .way-name{margin-top:6px;font-size:18px;letter-spacing:.02em}
+  .way-name small{font-size:14px;margin-right:.4em}
+  .way-meta{margin-top:6px}
+  .way-meta .yen{font-size:19px}
+}
 
 /* ===== 両脇レールのフレーム ===== */
 :root{--col:640px;--rail:268px}
@@ -846,7 +861,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="way-img"><img src="images/way-gift.jpg" alt="スペシャルギフトBOXを開いたところ" width="720" height="720" loading="lazy"></div>
         <div class="way-body">
           <p class="way-for">For someone special</p>
-          <p class="way-name">大切な人へ<br><span class="nw">スペシャルギフトBOX 2種</span></p>
+          <p class="way-name"><small>大切な人へ</small><span class="nw">スペシャルギフトBOX 2種</span></p>
           <p class="way-meta"><b>好評販売中</b><span class="yen">¥15,840〜</span></p>
         </div>
         </a>
@@ -871,7 +886,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="way-img"><img src="images/way-post.jpg" alt="ポスト投函BOXを開いたところ" width="720" height="720" loading="lazy"></div>
         <div class="way-body">
           <p class="way-for">For myself</p>
-          <p class="way-name">がんばった自分へ<br>ポスト投函BOX 4種</p>
+          <p class="way-name"><small>がんばった自分へ</small><span class="nw">ポスト投函BOX 4種</span></p>
           <p class="way-meta"><b>好評販売中</b><span class="yen">¥4,180〜</span></p>
         </div>
         </a>
