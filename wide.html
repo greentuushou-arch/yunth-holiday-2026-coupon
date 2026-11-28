@@ -662,6 +662,21 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .way-name{letter-spacing:.02em}
 }
 @media (max-width:374px){.way-name .nw{white-space:normal}.way-gift .tk-status{margin-top:76px}}
+
+/* 4つの箱: 横並びのアイコン(注釈はPDRNの1つだけ) */
+.pick-index{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.pick-index a{aspect-ratio:1/1;padding:8px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-radius:50%}
+.pick-index a i{font-size:clamp(28px,3.4vw,44px)}
+.pick-index a.c-pdrn i{font-size:clamp(22px,2.6vw,34px)}
+.pick-index a small{margin-top:6px;font-size:15px;font-weight:600}
+.pick-note{margin-top:10px;text-align:right}
+@media (max-width:767px){
+  .pick-index{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:20px}
+  .pick-index a{padding:4px 2px}
+  .pick-index a i{font-size:min(28px,7.4vw)}
+  .pick-index a.c-pdrn i{font-size:min(21px,5.6vw)}
+  .pick-index a small{margin-top:3px;font-size:14px;letter-spacing:0}
+}
 </style>
 </head>
 <body>
@@ -892,12 +907,12 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     <div class="pick">
       <h3 class="pick-head rv">肌悩みで選ぶ、<br class="sp"><em>4つ</em>の箱。</h3>
       <nav class="pick-index rv" aria-label="ポスト投函BOX 4種">
-        <a class="c-vc" href="#b-vc"><i>VC</i><span>毛穴<sup>※1</sup>・<br class="sp">透明感<sup>※2</sup>ケア</span><small>¥4,180</small></a>
-        <a class="c-va" href="#b-va"><i>VA</i><span>シミ対策<sup>※3</sup>・<br class="sp">シワ改善<sup>※4</sup></span><small>¥5,180</small></a>
-        <a class="c-az" href="#b-az"><i>AZ</i><span>毛穴<sup>※1</sup>・<br class="sp">うるおい集中</span><small>¥4,180</small></a>
-        <a class="c-pdrn" href="#b-pdrn"><i>PDRN<sup>※6</sup></i><span>うるおい満タン<br class="sp">水光肌<sup>※5</sup></span><small>¥4,180</small></a>
+        <a class="c-vc" href="#b-vc"><i>VC</i><small>¥4,180</small></a>
+        <a class="c-va" href="#b-va"><i>VA</i><small>¥5,180</small></a>
+        <a class="c-az" href="#b-az"><i>AZ</i><small>¥4,180</small></a>
+        <a class="c-pdrn" href="#b-pdrn"><i>PDRN<sup>※1</sup></i><small>¥4,180</small></a>
       </nav>
-      <p class="note rv" style="margin-top:14px">※1 乾燥による毛穴目立ち　※2 うるおいによる　※3 メラニンの生成を抑え、しみ・そばかすを防ぐ　※4 薬用VAセラムに含まれる有効成分ナイアシンアミドの承認効能　※5 うるおいとツヤのある肌印象のこと　※6 DNA-Na(保湿)</p>
+      <p class="note rv pick-note">※1 DNA-Na(保湿)</p>
       <div class="minis" id="minis"></div>
     </div>
 
