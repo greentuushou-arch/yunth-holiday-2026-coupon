@@ -689,6 +689,29 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .ways-head{font-size:min(24px,5.9vw);letter-spacing:.02em}
   .cal-head{font-size:min(22px,5.6vw);letter-spacing:.02em}
 }
+
+/* クーポンカード: 矢印なし・先着アイコンは開始日の横・余白を詰める */
+.way-body{padding-right:36px}
+@media (max-width:1099px){
+  .tk-badge{position:static;display:inline-flex;vertical-align:middle;margin:0 10px 0 0}
+  .tk .tk-status,.way-gift .tk-status{margin-top:0;vertical-align:middle}
+}
+@media (max-width:767px){
+  .way-body{padding:20px 20px 22px}
+  .tk{padding:18px 14px 20px}
+  .tk-badge{--s:64px}
+  .tk-badge b{font-size:19px}
+  .tk-status{font-size:16px;padding:3px 12px}
+  .tk-pre{margin-top:10px;font-size:20px}
+  .tk .off{margin-top:0}
+  .tk-cpn{margin-top:0;font-size:26px;line-height:1.25}
+  .tk .shop-note{margin-top:2px;line-height:1.5}
+  .tk-term{margin-top:6px}
+  .tk-mix{margin-top:6px}
+  .tk > div:first-child{padding-bottom:12px}
+  .tk .btn{margin-top:8px}
+}
+@media (max-width:374px){.tk-badge{--s:56px;margin-right:6px}.tk-badge b{font-size:16px}.tk-status{font-size:14px;padding:3px 6px;letter-spacing:0}}
 </style>
 </head>
 <body>
@@ -723,7 +746,6 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <p class="way-for">For someone special</p>
           <p class="way-name">大切な人へ<br><span class="nw">スペシャルギフトBOX 2種</span></p>
           <p class="way-meta"><b>好評販売中</b><span class="yen">¥15,840〜</span></p>
-          <span class="way-go" aria-hidden="true"></span>
         </div>
         </a>
         <div class="tk">
@@ -749,7 +771,6 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <p class="way-for">For myself</p>
           <p class="way-name">がんばった自分へ<br>ポスト投函BOX 4種</p>
           <p class="way-meta"><b>好評販売中</b><span class="yen">¥4,180〜</span></p>
-          <span class="way-go" aria-hidden="true"></span>
         </div>
         </a>
         <div class="tk">
