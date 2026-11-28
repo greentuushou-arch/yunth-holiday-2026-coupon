@@ -84,7 +84,6 @@ MENU = """<ul class="menu" data-menu>
 RAILS = f"""
 <aside class="rail rail--l" aria-label="ページメニュー">
   <span class="logo" role="img" aria-label="Yunth"></span>
-  <p class="rail-sub">HOLIDAY COLLECTION</p>
   <p class="rail-ttl">Holiday<br>Collection</p>
   {MENU}
 </aside>
